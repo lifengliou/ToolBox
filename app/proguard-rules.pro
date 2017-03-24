@@ -43,8 +43,9 @@
 
 -keep public class * extends android.support.v4.widget
 -keep public class * extends android.support.v4.**    #  *匹配任意字符不包括.  **匹配任意字符
--keep interface android.support.v4.app.** { *; }    #{ *;}    表示一个类中的所有的东西
--keep class android.support.v4.** { *; }        # 保持一个完整的包不被混淆
+-keep interface android.support.v4.app.** { *; }    #{ *;}    表示一个接口中的所有的东西都不被混淆
+# 下面这行表示保持这个包下面的所有的类里面的所有内容都不混淆
+-keep class android.support.v4.** { *; }        
 -keep class android.os.**{*;}
 -keep class android.support.v8.renderscript.** { *; }
 
