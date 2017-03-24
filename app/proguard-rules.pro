@@ -119,6 +119,16 @@
 
 # 实体类不混淆（自己项目实体类不被混淆，因为Gson中用到了反射）
 #-keep class me.febsky.entity.** { *; }
+### -----这是个列子---- ###
+#这个类里面的所有的成员变量和方法都不混淆
+-keep class me.febsky.testprogard.MainActivity { *; }
+#这个类里面的内部类的所有的成员变量和方法都不混淆
+-keep class me.febsky.testprogard.MainActivity$* { *; }
+#这个类里面的内部类的类名不备混淆，方法和变量还是混淆的
+-keep class me.febsky.testprogard.MainActivity$*
+#保持一个类的类名不被混淆，里面的方法和成员变量名还是被混淆的
+-keep public class me.febsky.testprogard.MyOutClass
+### -----这是个列子---- ###
 
 ## for sharedSDK
 -keep class android.net.http.SslError
